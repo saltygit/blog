@@ -1,23 +1,22 @@
 language: ruby
-
 cache: bundler
-
 rvm:
 - 2.2.2
-
 branches:
   only:
   - master
-
 script:
 - bundle exec jekyll build
-
 deploy:
   provider: s3
-  bucket: baayywhaztsvtqiytvdq # Update this
+  bucket: baayywhaztsvtqiytvdq
   skip_cleanup: true
-  region: eu-west-1         # Or whatever region you use
+  region: eu-west-1
   local_dir: _site
   on:
-    branch: master          # You can use another branch if you want
+    branch: master
   dot_match: true
+  access_key_id:
+    secure: UmGB6Im1E8pxlqxiJf0N/y3AXDC88AwHGXlRXwQDLNiBRX/j6BR0yWU4ZLBEduS+YlRVvCrMZSW16VoSRhN777bFsvurBL334+5MFIvqKP24vI5uGYHFSyZjpd7DEdwunkrVf6W7a0VSFh8Qp/L4b3OkmQM8BeufyPm5KRsHgH1WgWOe/Xl82CuPvrX91psHv25mIVUyW2QxezGY92ZSctbpC5FA9VHuvDXGNF0+Tl8p+v4N6xNfqbvY6b0q22cTQC8mHyEvUyYiK490lJJYDNB30Is4+o1J7IWjbP+3zKc/79H7TJZAbucxgLf/Rhsknc0tNxscDOiSlrMzpiaei7UWmIEEEP9JQb5nXgDvHdXFffkbih3VPZPjV5CjhFeKHUtEWlIBCZEUQS2EZjcqHasZUW7JyZzhnKMRkPLGBAGUiKUSWqYjSdQrDSP1VmrfLGuDdU9zRll/RbeS35oFTEhANJY459KIYLVoJtzDMoR5J99MZqWzcjZAzCNTg2KJogrlG01wJl3CxUppmslOFG8vRzJ2yUS1AKgfDfifM3RM8LGUvLG1B2aovkryHczy1zN3Mhur3Ws4yZ5q3VJPxrqU8ogjgEF+dlUYHTK2UYGA3KOSm3V5DoAGRc1T1bEvlUuiYzo0kOv11TRCVE2E6MIP1YI+iErtR/yugTSRLxk=
+  secret_access_key:
+    secure: UeU8580b3NnUbvyOf4dt+ZVtl2n8VFDy9uJYSbJE12IFaiwazwP2Vq6BXy5GCnGkXHTcwuiWAaq77jSncAfdWZYWxqibhUeGBvhurO+9BUxdOI+PLDbrZTRigTqmtcMWLFePeuJ8+J/6pkm4NK38crV7hu8Dt7SnT5pYyAxKPifwWFzPGbtfGYcJui8nyU435w5CkeQWovYAxzPiOivlqrPnreQNXTLjx1dvmVHAheAXWcgBbxmaJBnmL+L8xz8KbiinM4CxyKE4JeCEHbhnBFcBKIJJXXouDGwccgOWxolRfa//gh1fGXuP6my6SIoZK/t5hCnxpZT38mcCz5Yefkzo4pyg9yHy2TZ5I/CKwxizecWYtCzw2uHuYo+ufrLBZNV7fWzKw3TmNH4mE8x9RGk6GmAJ0+Ndpjv2AbJeLCirt4PixVKKeUKAgwQACuQS0qZur2xXJbSYa0DlomvESsoFQl2RfE0nsG6m75vROZpD3vzXc5ZbGL+VUxAir8Vv3W0PbSy7G2nGxcTaG7scaEiLYQEfPPKGm5OfB95xxmC3m3BTDudWyVXKNXoMAUp3JmiOsaDThbUthTI+izUMigZtq6RFXITtbqsalp+2HpdD45SvoaGdC//GR3ToiOqiKnnZuwwwIyHasKxWqf9jyWSU/bDJfmya++G3mdCOjBo=
