@@ -11,7 +11,7 @@ deploy:
   provider: s3
   bucket: baayywhaztsvtqiytvdq
   skip_cleanup: true
-  region: "eu-central-1"
+  region: Frankfurt
   local_dir: _site
   on:
     branch: master
