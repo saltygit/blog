@@ -4,6 +4,6 @@ rvm:
 - 2.2.2
 branches:
 - master
-install: gem install jekyll -v 2.4.0 && gem install s3_website
+install: gem install jekyll -v 3.3.1 && gem install s3_website
 script: bundle exec jekyll build
 after_success: s3_website push
